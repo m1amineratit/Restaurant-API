@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Menu, Reservation, Category, Cart, Order, OrderItem
-from .serializers import MenuSerializer, ReservationSerializer, CategorySerializer, CartSerializer, OrderSerializer, OrderItemSerializer
+from .models import Menu, Category, Cart, Order, OrderItem
+from .serializers import MenuSerializer, CategorySerializer, CartSerializer, OrderSerializer, OrderItemSerializer
 from rest_framework.viewsets import ModelViewSet
 from .permissions import IsDeliveryCrew, ReadOnly, IsManager
 from rest_framework.views import APIView

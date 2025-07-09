@@ -27,16 +27,7 @@ class Menu(models.Model):
 
     def __str__(self):
         return self.title
-    
-class Reservation(models.Model):
-    first_name = models.CharField(max_length=150)
-    last_name = models.CharField(max_length=150)
-    phone_number = models.CharField(max_length=20)
-    number_of_guests = models.PositiveIntegerField(default=1)
-    created_at = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return f'Reservation by {self.first_name} {self.last_name}'
 
 class Cart(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)

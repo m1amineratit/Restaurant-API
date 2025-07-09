@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Menu, Reservation, Category, Cart, Order, OrderItem
+from .models import Menu, Category, Cart, Order, OrderItem
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -12,10 +12,7 @@ class MenuSerializer(serializers.ModelSerializer):
         model = Menu
         fields = '__all__'
 
-class ReservationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Reservation
-        fields = '__all__'
+
 
 class CartSerializer(serializers.ModelSerializer):
     class Meta:
